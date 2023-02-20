@@ -2,6 +2,18 @@ Race Functions:
 
 calcPoints():
 
+document.onkeyup = function(e) {
+  if (e.which == 77) {
+    alert("-1 Points");
+  } else if (e.which == 66) {
+    alert("-0.5 Points");
+  } else if (e.which == 89) {
+    alert("Ctrl + Alt + Y shortcut combination was pressed");
+  } else if (e.which == 85) {
+    alert("-2 Points");
+  }
+};
+
 startSignal():
 
 CameraFeed():
