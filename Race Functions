@@ -51,3 +51,16 @@ if (navigator.mediaDevices.getUserMedia) {
     });
 }
 
+function stop(e) {
+  var stream = video.srcObject;
+  var tracks = stream.getTracks();
+
+  for (var i = 0; i < tracks.length; i++) {
+    var track = tracks[i];
+    track.stop();
+  }
+
+  video.srcObject = null;
+}
+
+https://www.kirupa.com/html5/accessing_your_webcam_in_html5.htm
