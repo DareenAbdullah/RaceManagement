@@ -1,5 +1,8 @@
 <html lang="en">
 <head>
+    <style>
+        p {text-align: center;}
+    </style>
     <h3>"Hello</h3>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +11,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css" />
    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="live.css">
 </head>
 <body>
     <section id ="menu">
@@ -18,8 +21,8 @@
         </div>
 
         <div class = "items">
-            <li><i class="fa-solid fa-users"></i><a href="">Register</a></li>
-            <li><i class="fa-solid fa-clipboard-list"></i><a href="">Tournament Bracket</a></li>
+            <li><i class="fa-solid fa-users"></i><a href="index.html">Register</a></li>
+            <li><i class="fa-solid fa-clipboard-list"></i><a href="tourBrack.html">Tournament Bracket</a></li>
             <li><i class="fa-solid fa-tv"></i><a href="liveMatch.html">Live Match</a></li>
             <li><i class="fa-solid fa-square-poll-vertical"></i><a href="#">Results</a></li>
         </div>
@@ -47,12 +50,38 @@
                 </div>
             </div>
         </div>
-    </section>
-    <div id="container">
-        <video autoplay="true" id="videoElement">
-        
-        </video>
+    <div id = "rules">
+        <p><br><br><br><br><br><br> 
+            Rules:
+            <br> Starting before the Start Signal will result in a .5-second Penalty
+            <br> Collisions will result in a .5-second Penalty
+            <br> Travelling outside the racetrack boundaries will result in a 1-second Penalty
+            <br> Roll-over Events will result in a 2-second Penalty
+        </p>
     </div>
+
+    <div id ="startSignal">
+        <input type="button" class="start" value="start" onclick="startSignal();">
+    </div>
+
+    <div id="container">
+        <div class="vid">
+            <video autoplay="true" id="videoElement">
+        
+            </video>
+        </div>
+        <div class="vid">
+            <video autoplay="true" id="videoElement">
+        
+            </video>
+        </div>
+        <!--
+        <div id = "connectButtons">
+            <button type="button" id="connect" onclick="connect()">Connect</button>
+            <button type="button" id="disconnect" onclick="disconnect()">Disconnect</button>
+        </div> -->
+    </div>
+    </section>
     <script src="live.js"></script>
 </body>
 </html>
