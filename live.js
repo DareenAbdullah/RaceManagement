@@ -50,6 +50,27 @@ function updateCountdown(){
 	/*start the stop watches*/
 	intervalRace = setInterval(startTimer);
 	intervalRace2 = setInterval(startTimer2);
+	  
+	document.addEventListener('keyup', function(event) {
+		if (event.code === 'Enter') {
+			clearInterval(intervalRace);
+			seconds = seconds;
+			milliSec = milliSec;
+			appendMilli.innerHTML = milliSec;
+			appendSeconds.innerHTML = seconds;
+		}
+	});
+	  
+	document.addEventListener('keyup', function(event) {
+		if (event.code === 'Enter') {
+			clearInterval(intervalRace2);
+			seconds2 = seconds2;
+			milliSec2 = milliSec2;
+			appendMilli2.innerHTML = milliSec2;
+			appendSeconds2.innerHTML = seconds2;
+		}
+	});
+	  
   }
 }
 
